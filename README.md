@@ -4,7 +4,7 @@
 
 [Mingqian Ji](https://github.com/Mingqj) </sup>,
 [Shanshan Zhang](https://shanshanzhang.github.io/) ✉</sup>,
-[Jian Yang](https://scholar.google.com/citations?user=6CIDtZQAAAAJ&hl=zh-CN) </sup>,
+[Jian Yang](https://scholar.google.com/citations?user=6CIDtZQAAAAJ&hl=zh-CN) </sup>
 
 Nanjing University of Science and Technology
 
