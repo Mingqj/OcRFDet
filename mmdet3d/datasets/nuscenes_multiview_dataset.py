@@ -247,7 +247,6 @@ class NuScenesMultiViewDataset(Custom3DDataset):
         if 'ann_infos' in info:
             input_dict['ann_infos'] = info['ann_infos']
             input_dict['ann_info_2d'] = {}
-            ####################################################################################
             if self.with_box2d:
                 camera_types = ['CAM_FRONT_LEFT', 'CAM_FRONT', 'CAM_FRONT_RIGHT', 'CAM_BACK_LEFT', 'CAM_BACK', 'CAM_BACK_RIGHT']
                 gt_bboxes_mv, gt_labels_mv, gt_bboxes_ignore_mv = [], [], []
@@ -296,8 +295,6 @@ class NuScenesMultiViewDataset(Custom3DDataset):
                 input_dict['ann_info_2d']['gt_bboxes'] = gt_bboxes_mv 
                 input_dict['ann_info_2d']['gt_labels'] = gt_labels_mv 
                 input_dict['ann_info_2d']['gt_bboxes_ignore'] = gt_bboxes_ignore_mv
-
-            ####################################################################################
 
         if self.modality['use_camera']:
             if self.img_info_prototype == 'mmcv':
