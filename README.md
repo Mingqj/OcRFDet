@@ -26,14 +26,14 @@ We propose Object-Centric Radiance Fields (OcRF) to enhance multi-view 3D object
 ## 💾 Main Results
 
 **nuScenes val set**
-| Config                                    | mAP  | NDS |                                                Model                                                |
-|:-----------------------------------------:|:----:|:----:|:--------------------------------------------------------------------------------------------------:|
-| [**OcRFDet**](configs/ocrfdet/ocrfdet.py) | 40.0 | 50.9 |[GoogleDrive](https://drive.google.com/file/d/1xvFha8d3OucWoxgL3w3Z1MNmh_HhiyWs/view?usp=drive_link)|
+| Config                                    | Frames | mAP  | NDS |                                                Model                                                |
+|:-----------------------------------------:|:------:|:----:|:----:|:--------------------------------------------------------------------------------------------------:|
+| [**OcRFDet**](configs/ocrfdet/ocrfdet.py) |    2   | 40.0 | 50.9 |[GoogleDrive](https://drive.google.com/file/d/1xvFha8d3OucWoxgL3w3Z1MNmh_HhiyWs/view?usp=drive_link)|
 
 **nuScenes test set**
-| Config    | mAP  |  NDS |                                             Model                                                  |
-|:---------:|:----:|:----:|:--------------------------------------------------------------------------------------------------:|
-|**OcRFDet**| 57.2 | 64.8 |[GoogleDrive](https://drive.google.com/file/d/1iJWmquYLXv5mRAaWbP6ThBgjrPVvzv5Q/view?usp=drive_link)|
+| Config    | Frames | mAP  |  NDS |                                             Model                                                  |
+|:---------:|:------:|:----:|:----:|:--------------------------------------------------------------------------------------------------:|
+|**OcRFDet**|    8   | 57.2 | 64.8 |[GoogleDrive](https://drive.google.com/file/d/1iJWmquYLXv5mRAaWbP6ThBgjrPVvzv5Q/view?usp=drive_link)|
 
 ## Get Started
 
@@ -51,7 +51,7 @@ python tools/create_data_bevdet.py
 python tools/generate_point_label.py
 ```
 
-  Arrange the folder as:
+Notice: Arrange the folder as:
 ```shell script
 OcRFDet
     └──data
