@@ -51,7 +51,7 @@ python tools/create_data_bevdet.py
 python tools/generate_point_label.py
 ```
 
-Arrange the folder as:
+  Arrange the folder as:
 ```shell script
 OcRFDet
     └──data
