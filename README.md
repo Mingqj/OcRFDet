@@ -82,7 +82,7 @@ bash tools/dist_train.sh configs/ocrfdet/ocrfdet.py 8
 bash tools/dist_test.sh configs/ocrfdet/ocrfdet.py  work_dirs/ocrfdet/epoch_20_ema.pth 8 --no-aavt --eval mAP
 ```
 
-#### 👀 Visualize the predicted result.
+#### 👀 Visualize the predicted result
 ```shell
 python tools/test.py ./configs/ocrfdet/ocrfdet.py work_dirs/ocrfdet/epoch_20_ema.pth --format-only --eval-options jsonfile_prefix='./work_dirs/visual/'
 ```
