@@ -51,6 +51,19 @@ python tools/create_data_bevdet.py
 python tools/generate_point_label.py
 ```
 
+Arrange the folder as:
+```shell script
+OcRFDet
+    └──data
+        └── nuscenes
+            ├── v1.0-trainval
+            ├── sweeps 
+            ├── samples
+            ├── samples_point_label
+            ├── bevdetv2-nuscenes_infos_train.pkl
+            └── bevdetv2-nuscenes_infos_val.pkl
+```
+
 4. Please follow the MVSGaussian to install the Gaussian Splatting renderer by running:
 
 ```shell
