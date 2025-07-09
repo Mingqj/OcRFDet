@@ -24,14 +24,14 @@ We propose Object-Centric Radiance Fields (OcRF) to enhance multi-view 3D object
 ## 💾 Main Results
 
 **nuScenes val set**
-| Config                                                            | mAP  | NDS | Model|
-|:-----------------------------------------------------------------:|:----:|:---:|:----:|
-| [**OcRFDet**](configs/ocrfdet/ocrfdet.py) | 40.0 | 50.9 |-|
+| Config                                    | mAP  | NDS |                                                Model                                                |
+|:-----------------------------------------:|:----:|:----:|:--------------------------------------------------------------------------------------------------:|
+| [**OcRFDet**](configs/ocrfdet/ocrfdet.py) | 40.0 | 50.9 |[GoogleDrive](https://drive.google.com/file/d/1xvFha8d3OucWoxgL3w3Z1MNmh_HhiyWs/view?usp=drive_link)|
 
 **nuScenes test set**
-| Config                                                            | mAP  | NDS | Model|
-|:-----------------------------------------------------------------:|:----:|:---:|:----:|
-|**OcRFDet**| 57.2 | 64.8 |-|
+| Config    | mAP  |  NDS |                                             Model                                                  |
+|:---------:|:----:|:----:|:--------------------------------------------------------------------------------------------------:|
+|**OcRFDet**| 57.2 | 64.8 |[GoogleDrive](https://drive.google.com/file/d/1iJWmquYLXv5mRAaWbP6ThBgjrPVvzv5Q/view?usp=drive_link)|
 
 ## Get Started
 
@@ -68,7 +68,9 @@ bash tools/dist_test.sh configs/ocrfdet/ocrfdet.py  work_dirs/ocrfdet/epoch_20_e
 ```
 
 #### 👀 Visualize the predicted result.
+```shell
 python tools/test.py ./configs/ocrfdet/ocrfdet.py work_dirs/ocrfdet/epoch_20_ema.pth --format-only --eval-options jsonfile_prefix='./work_dirs/visual/'
+```
 
 ## ❛❛❞ Citation
 ```bibtex
