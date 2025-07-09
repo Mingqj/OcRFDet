@@ -21,6 +21,10 @@ This repository represents the official implementation of the paper titled "OcRF
 
 We propose Object-Centric Radiance Fields (OcRF) to enhance multi-view 3D object detection by focusing rendering on foreground objects and filtering out background noise. An auxiliary rendering task improves 3D voxel features, while the generated opacity maps are used to refine BEV features through Height-aware Opacity-based Attention (HOA). This explicit geometry-aware design significantly boosts the detector’s ability to understand 3D structure from multi-view RGB images.
 
+![](./resources/pipeline.png)
+
+![](./resources/bev_feature1.png)
+
 ## 💾 Main Results
 
 **nuScenes val set**
