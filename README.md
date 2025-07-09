@@ -23,12 +23,12 @@ We propose Object-Centric Radiance Fields (OcRF) to enhance multi-view 3D object
 
 ## 💾 Main Results
 
-# nuScenes val set
+**nuScenes val set**
 | Config                                                            | mAP  | NDS | Model|
 |:-----------------------------------------------------------------:|:----:|:---:|:----:|
 | [**OcRFDet**](configs/ocrfdet/ocrfdet.py) | 40.0 | 50.9 |-|
 
-# nuScenes test set
+**nuScenes test set**
 | Config                                                            | mAP  | NDS | Model|
 |:-----------------------------------------------------------------:|:----:|:---:|:----:|
 | [**OcRFDet**] | 57.2 | 64.8 |-|
