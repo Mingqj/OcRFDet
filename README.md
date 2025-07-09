@@ -6,7 +6,7 @@
 [Shanshan Zhang](https://shanshanzhang.github.io/) ✉</sup>,
 [Jian Yang](https://scholar.google.com/citations?user=6CIDtZQAAAAJ&hl=zh-CN) </sup>
 
-Nanjing University of Science and Technology
+PCA Lab, School of Computer Science and Engineering, Nanjing University of Science and Technology
 
 ✉ Corresponding author
 
