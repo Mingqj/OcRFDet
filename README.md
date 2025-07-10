@@ -85,6 +85,7 @@ bash tools/dist_test.sh configs/ocrfdet/ocrfdet.py  work_dirs/ocrfdet/epoch_20_e
 #### 👀 Visualize the predicted result
 ```shell
 python tools/test.py ./configs/ocrfdet/ocrfdet.py work_dirs/ocrfdet/epoch_20_ema.pth --format-only --eval-options jsonfile_prefix='./work_dirs/visual/'
+python tools/analysis_tools/vis0.py ./work_dirs/visual/pts_bbox/results_nusc.json --save_path ./work_dirs/visual/save_dir --draw-gt --vis-thred 0.3 --format image --vis-frames 5 --scale-factor 2
 ```
 
 ## ❛❛❞ Citation
