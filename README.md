@@ -64,12 +64,12 @@ OcRFDet
             └── bevdetv2-nuscenes_infos_val.pkl
 ```
 
-4. Please follow the MVSGaussian to install the Gaussian Splatting renderer by running:
+4. Please follow the Grendel_GS to install the Gaussian Splatting renderer by running:
 
 ```shell
-cd mmdet3d/models/necks/MVSGaussian
-pip install lib/submodules/diff-gaussian-rasterization
-pip install lib/submodules/simple-knn
+cd mmdet3d/models/necks/Grendel_GS
+pip install submodules/diff-gaussian-rasterization
+pip install submodules/simple-knn
 ```
 
 #### 🏋️ Train OcRFDet model
@@ -100,4 +100,4 @@ python tools/analysis_tools/vis0.py ./work_dirs/visual/pts_bbox/results_nusc.jso
 
 ## ❤️ Acknowledgement
 
-We thank these great works and open-source codebases: [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [BEVDet](https://github.com/HuangJunJie2017/BEVDet), [DualBEV](https://github.com/PeidongLi/DualBEV), [MVSGaussian](https://github.com/TQTQliu/MVSGaussian).
+We thank these great works and open-source codebases: [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [BEVDet](https://github.com/HuangJunJie2017/BEVDet), [DualBEV](https://github.com/PeidongLi/DualBEV), [MVSGaussian](https://github.com/TQTQliu/MVSGaussian), [Grendel-GS](https://github.com/nyu-systems/Grendel-GS).
