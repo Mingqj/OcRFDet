@@ -23,6 +23,12 @@ We propose Object-Centric Radiance Fields (OcRF) to enhance multi-view 3D object
 
 ![](./resources/pipeline.png)
 
+## Checklist
+
+- [x] Release the code
+- [ ] Check the diff-gaussian-rasterization
+- [ ] Upload the 2D GT
+
 ## 💾 Main Results
 
 **nuScenes val set**
