@@ -26,8 +26,7 @@ We propose Object-Centric Radiance Fields (OcRF) to enhance multi-view 3D object
 ## Checklist
 
 - [x] Release the code
-- [ ] Check the diff-gaussian-rasterization
-- [ ] Upload the 2D GT
+- [x] Check the diff-gaussian-rasterization
 
 ## 💾 Main Results
 
@@ -70,12 +69,13 @@ OcRFDet
             └── bevdetv2-nuscenes_infos_val.pkl
 ```
 
-4. Please follow the Grendel_GS to install the Gaussian Splatting renderer by running:
+4. Please follow the diff-gaussian-rasterization-w-depth to install the Gaussian Splatting renderer by running:
 
 ```shell
-cd mmdet3d/models/necks/Grendel_GS
-pip install submodules/diff-gaussian-rasterization
-pip install submodules/simple-knn
+git clone git@github.com:git@github.com:JonathonLuiten/diff-gaussian-rasterization-w-depth.git
+cd diff-gaussian-rasterization-w-depth
+python setup.py install
+pip install .
 ```
 
 #### 🏋️ Train OcRFDet model
