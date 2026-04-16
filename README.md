@@ -72,7 +72,7 @@ OcRFDet
 4. Please follow the diff-gaussian-rasterization-w-depth to install the Gaussian Splatting renderer by running:
 
 ```shell
-git clone git@github.com:git@github.com:JonathonLuiten/diff-gaussian-rasterization-w-depth.git
+git clone https://github.com/JonathonLuiten/diff-gaussian-rasterization-w-depth.git
 cd diff-gaussian-rasterization-w-depth
 python setup.py install
 pip install .
@@ -106,4 +106,4 @@ python tools/analysis_tools/vis0.py ./work_dirs/visual/pts_bbox/results_nusc.jso
 
 ## ❤️ Acknowledgement
 
-We thank these great works and open-source codebases: [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [BEVDet](https://github.com/HuangJunJie2017/BEVDet), [DualBEV](https://github.com/PeidongLi/DualBEV), [MVSGaussian](https://github.com/TQTQliu/MVSGaussian), [Grendel-GS](https://github.com/nyu-systems/Grendel-GS).
+We thank these great works and open-source codebases: [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [BEVDet](https://github.com/HuangJunJie2017/BEVDet), [DualBEV](https://github.com/PeidongLi/DualBEV), [MVSGaussian](https://github.com/TQTQliu/MVSGaussian), [Grendel-GS](https://github.com/nyu-systems/Grendel-GS), [diff-gaussian-rasterization-w-depth](https://github.com/JonathonLuiten/diff-gaussian-rasterization-w-depth).
