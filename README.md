@@ -29,7 +29,7 @@ We propose Object-Centric Radiance Fields (OcRF) to enhance multi-view 3D object
 
 This repository presents the journal extension of OcRFDet, extending the original object-centric radiance field framework with global geometry distillation and more comprehensive evaluations to further improve geometry-aware 3D object detection.
 
-![](./resources/pipeline2.png)
+![](./resources/pipeline2.jpg)
 
 
 ## 💾 Main Results
