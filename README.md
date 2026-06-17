@@ -38,11 +38,13 @@ This repository presents the journal extension of OcRFDet, extending the origina
 | Config                                    | Frames | mAP  | NDS |                                                Model                                                |
 |:-----------------------------------------:|:------:|:----:|:----:|:--------------------------------------------------------------------------------------------------:|
 | [**OcRFDet**](configs/ocrfdet/ocrfdet.py) |    2   | 40.0 | 50.9 |[GoogleDrive](https://drive.google.com/file/d/1xvFha8d3OucWoxgL3w3Z1MNmh_HhiyWs/view?usp=drive_link)|
+| [**GeoEnhDet**](configs/ocrfdet/ocrfdet_vggt.py) |    2   | 40.4 | 51.3 |-|
 
 **nuScenes test set**
 | Config    | Frames | mAP  |  NDS |                                             Results                                                  |
 |:---------:|:------:|:----:|:----:|:--------------------------------------------------------------------------------------------------:|
 |**OcRFDet**|    8   | 57.2 | 64.8 |[GoogleDrive](https://drive.google.com/file/d/1iJWmquYLXv5mRAaWbP6ThBgjrPVvzv5Q/view?usp=drive_link)|
+|**GeoEnhDet**|    8   | 58.6 | 66.2 |-|
 
 ## Get Started
 
@@ -58,6 +60,11 @@ python tools/create_data_bevdet.py
 
 ```shell
 python tools/generate_point_label.py
+```
+
+4. Please load vggt pretrained model in [vggt model](https://huggingface.co/facebook/VGGT-1B/resolve/main/model.pt) and res50 in [resnet50](https://download.openmmlab.com/mmdetection3d/v0.1.0_models/nuimages_semseg/cascade_mask_rcnn_r50_fpn_coco-20e_20e_nuim/cascade_mask_rcnn_r50_fpn_coco-20e_20e_nuim_20201009_124951-40963960.pth). Please combine vggt and resnet50 as the pretrained model:
+```shell
+python tools/combine_res50_vggt.py
 ```
 
 Notice: arrange the folder as:
@@ -92,9 +99,22 @@ bash tools/dist_train.sh configs/ocrfdet/ocrfdet.py 8
 bash tools/dist_test.sh configs/ocrfdet/ocrfdet.py  work_dirs/ocrfdet/epoch_20_ema.pth 8 --no-aavt --eval mAP
 ```
 
+#### 🏋️ Train GeoEnhDet model
+```shell
+bash tools/dist_train.sh configs/ocrfdet/ocrfdet_vggt.py 8
+```
+
+#### 📋 Test GeoEnhDet model
+```shell
+bash tools/dist_test.sh configs/ocrfdet/ocrfdet_vggt.py  work_dirs/ocrfdet_vggt/epoch_20_ema.pth 8 --no-aavt --eval mAP
+```
+
+
 #### 👀 Visualize the predicted result
 ```shell
 python tools/test.py ./configs/ocrfdet/ocrfdet.py work_dirs/ocrfdet/epoch_20_ema.pth --format-only --eval-options jsonfile_prefix='./work_dirs/visual/'
+python tools/analysis_tools/vis0.py ./work_dirs/visual/pts_bbox/results_nusc.json --save_path ./work_dirs/visual/save_dir --draw-gt --vis-thred 0.3 --format image --vis-frames 5 --scale-factor 2
+python tools/test.py ./configs/ocrfdet/ocrfdet_vggt.py work_dirs/ocrfdet_vggt/epoch_20_ema.pth --format-only --eval-options jsonfile_prefix='./work_dirs/visual/'
 python tools/analysis_tools/vis0.py ./work_dirs/visual/pts_bbox/results_nusc.json --save_path ./work_dirs/visual/save_dir --draw-gt --vis-thred 0.3 --format image --vis-frames 5 --scale-factor 2
 ```
 
@@ -110,4 +130,4 @@ python tools/analysis_tools/vis0.py ./work_dirs/visual/pts_bbox/results_nusc.jso
 
 ## ❤️ Acknowledgement
 
-We thank these great works and open-source codebases: [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [BEVDet](https://github.com/HuangJunJie2017/BEVDet), [DualBEV](https://github.com/PeidongLi/DualBEV), [MVSGaussian](https://github.com/TQTQliu/MVSGaussian), [Grendel-GS](https://github.com/nyu-systems/Grendel-GS), [diff-gaussian-rasterization-w-depth](https://github.com/JonathonLuiten/diff-gaussian-rasterization-w-depth).
+We thank these great works and open-source codebases: [MMDetection3D](https://github.com/open-mmlab/mmdetection3d), [BEVDet](https://github.com/HuangJunJie2017/BEVDet), [DualBEV](https://github.com/PeidongLi/DualBEV), [MVSGaussian](https://github.com/TQTQliu/MVSGaussian), [Grendel-GS](https://github.com/nyu-systems/Grendel-GS), [diff-gaussian-rasterization-w-depth](https://github.com/JonathonLuiten/diff-gaussian-rasterization-w-depth), [vggt](https://github.com/facebookresearch/vggt).
