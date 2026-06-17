@@ -23,10 +23,14 @@ We propose Object-Centric Radiance Fields (OcRF) to enhance multi-view 3D object
 
 ![](./resources/pipeline.png)
 
-## Checklist
+# GeoEnhDet: External Geometry-Driven Feature Enhancement for Multi-View 3D Object Detection
 
-- [x] Release the code
-- [x] Check the diff-gaussian-rasterization
+## 📖 About
+
+This repository presents the journal extension of OcRFDet, extending the original object-centric radiance field framework with global geometry distillation and more comprehensive evaluations to further improve geometry-aware 3D object detection.
+
+![](./resources/pipeline2.png)
+
 
 ## 💾 Main Results
 
